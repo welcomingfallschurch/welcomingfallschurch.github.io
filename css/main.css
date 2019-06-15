@@ -49,6 +49,7 @@ nav.floating img {
     width: 50px;
 }
 nav li {
+    position: relative;
     margin-left: 20px;
     display: inline-block;
     border-radius: 50%;
@@ -70,7 +71,7 @@ section.jumbotron {
     background-repeat: no-repeat;
     border: solid white;
     border-width: 0 2vw;
-    height: 30vh;
+    height: 50vh;
 }
 section.jumbotron.home {
     background-image: url("../../images/header.jpg");
@@ -135,7 +136,7 @@ footer {
     .row > .col-7 { width: 58.3333333333%; }
     .row > .col-8 { width: 66.6666666667%; }
 }
-@media (max-width: 750px) {
+@media (max-width: 925px) {
     nav {
         position: relative;
         height: auto;
@@ -146,6 +147,9 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
+    section.jumbotron {
+        height: 30vh;
+    }
     nav li {
         margin-top: 5px;
     }
@@ -155,7 +159,7 @@ footer {
 }
 @media (max-width: 1150px) {
     nav ul {
-        font-size: 15px;
+        font-size: 20px;
     }
     body {
         font-size: 15pt;
@@ -180,9 +184,24 @@ a {
     border-bottom: solid 1px rgba(0, 0, 0, 0);
     text-decoration: none;
 }
-a:hover {
-    border-bottom-color: rgba(0, 0, 0, 1);
-    border-radius: 0px;
+nav li a:hover::after {
+    transform: scaleX(100);
+    visibility: visible;
+}
+nav li a::after {
+    transform: scaleX(0);
+    width: 1%;
+    content: '';
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    /* Compensate for the width: 1% */
+    margin-left: -1%;
+    overflow: hidden;
+    bottom: 0px;
+    height: 2px;
+    background-color: black;
+    transition: transform 0.2s ease-in-out;
 }
 p {
     text-align: justify;
