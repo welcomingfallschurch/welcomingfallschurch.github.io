@@ -100,7 +100,7 @@ footer {
         margin-top: 20px;
     }
     nav ul {
-        margin-left: 5px;
+        margin: 0px 5px;
     }
     section {
         padding: 30px 50px;
@@ -180,24 +180,19 @@ h1 {
 a {
     transition: all 0.25s ease-out;
     color: inherit;
-    border-radius: 25%;
-    border-bottom: solid 1px rgba(0, 0, 0, 0);
     text-decoration: none;
 }
 nav li a:hover::after {
-    transform: scaleX(100);
+    transform: scaleX(1);
     visibility: visible;
 }
 nav li a::after {
     transform: scaleX(0);
-    width: 1%;
+    width: 100%;
     content: '';
     position: absolute;
     z-index: 2;
-    left: 50%;
-    /* Compensate for the width: 1% */
-    margin-left: -1%;
-    overflow: hidden;
+    left: 0%;
     bottom: 0px;
     height: 2px;
     background-color: black;
