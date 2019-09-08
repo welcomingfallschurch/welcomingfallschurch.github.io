@@ -212,3 +212,6 @@ p {
     text-align: justify;
     padding: 6px 0;
 }
+.motive {
+    font-weight: bold;
+}
