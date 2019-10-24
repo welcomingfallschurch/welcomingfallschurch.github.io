@@ -65,7 +65,7 @@ section > h1 ~ img {
     text-align: center;
 }
 section ul {
-    margin-left: 25px;
+    padding-left: 25px;
 }
 section.wide {}
 section.jumbotron {
@@ -98,7 +98,7 @@ footer {
     text-align: center;
     padding: 1em 3em;
 }
-@media (min-width: 1150px) {
+@media (min-width: 1276px) {
     body > nav + section > h1 + p {
         margin-top: 20px;
     }
@@ -139,7 +139,50 @@ footer {
     .row > .col-7 { width: 58.3333333333%; }
     .row > .col-8 { width: 66.6666666667%; }
 }
-@media (max-width: 925px) {
+
+@media (max-width: 649px) {
+    #partner-images {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        align-items: stretch;
+        justify-items: center;
+    }
+    #partner-images > * {
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 20px;
+        vertical-align: middle;
+    }
+    #partner-images img {
+        max-height: 100px;
+        max-width: 300px;
+    }
+}
+@media (min-width: 650px) and (max-width: 1275px) {
+    /* Rows */
+    .row.small {
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        align-items: stretch;
+    }
+    .row.small > * {
+        box-sizing: border-box;
+        padding: 20px;
+        vertical-align: middle;
+    }
+    .row.small > .col-1 { width: 8.3333333333%; }
+    .row.small > .col-2 { width: 16.6666666667%; }
+    .row.small > .col-3 { width: 25%; }
+    .row.small > .col-4 { width: 33.3333333333%; }
+    .row.small > .col-5 { width: 41.6666666667%; }
+    .row.small > .col-6 { width: 50%; }
+    .row.small > .col-7 { width: 58.3333333333%; }
+    .row.small > .col-8 { width: 66.6666666667%; }
+}
+@media (max-width: 1050px) {
     nav {
         position: relative;
         height: auto;
@@ -160,7 +203,7 @@ footer {
         margin-top: 0px;
     }
 }
-@media (max-width: 1150px) {
+@media (max-width: 1276px) {
     nav ul {
         font-size: 20px;
     }
@@ -214,4 +257,7 @@ p {
 }
 .motive {
     font-weight: bold;
+}
+p.heading {
+    text-decoration: underline;
 }
