@@ -52,8 +52,32 @@ nav li {
     position: relative;
     margin-left: 20px;
     display: inline-block;
-    border-radius: 50%;
-    transition: border-bottom 0.3s, border-radius 0.3s;
+    transition: border-bottom 0.3s;
+}
+nav li ul {
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    margin: 0px;
+    padding: 5px 4px;
+    border-radius: 3px;
+    transition: opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
+nav li:hover ul {
+    pointer-events: auto;
+    opacity: 1;
+    box-shadow: 0px 6px 6px 0px rgba(12, 12, 12, 0.3);
+}
+nav li ul li {
+    display: inline-block;
+    margin: 0px 3px;
+    width: min-content
 }
 body > nav + section {
     margin-top: 50px;
@@ -159,6 +183,22 @@ footer {
         max-height: 100px;
         max-width: 300px;
     }
+    .jumbotron.split > img ~ p {
+        clear: both;
+    }
+    .jumbotron.split {
+        text-align: center;
+    }
+    .jumbotron.split > img {
+        margin-right: 0px;
+        margin-left: 0px;
+        display: inline-block;
+        float: none;
+        width: initial;
+        /* 60px padding on section */
+        max-width: calc(100vw - 60px);
+        max-height: 200px;
+    }
 }
 @media (min-width: 650px) and (max-width: 1275px) {
     /* Rows */
@@ -187,11 +227,18 @@ footer {
         position: relative;
         height: auto;
     }
-    nav ul {
+    nav ul, nav ul li ul {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    nav ul li ul {
+        position: relative;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        pointer-events: all;
     }
     section.jumbotron {
         height: 30vh;
@@ -232,7 +279,7 @@ a {
 a:hover {
     border-bottom-color: rgba(0, 0, 0, 1);
 }
-li a {
+nav li a {
     border-bottom: none;
 }
 nav li a:hover::after {
@@ -240,6 +287,8 @@ nav li a:hover::after {
     visibility: visible;
 }
 nav li a::after {
+    cursor: default;
+    pointer-events: none;
     transform: scaleX(0);
     width: 100%;
     content: '';
@@ -260,4 +309,19 @@ p {
 }
 p.heading {
     text-decoration: underline;
+}
+.jumbotron.split {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+/* .jumbotron.split ~ p {
+    clear: both;
+} */
+.inline-main-img {
+    /* Subtract half of right margin */
+    width: calc(50% - 20px);
+    float: left;
+    margin-right: 40px;
+    margin-top: 10px;
+    display: block;
 }
