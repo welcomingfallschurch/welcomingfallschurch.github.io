@@ -32,6 +32,7 @@ nav #logo {
     border: none;
 }
 nav img {
+    z-index: 50;
     height: 150px;
     width: 150px;
     transition: width 0.3s, height 0.3s;
@@ -121,6 +122,96 @@ footer {
     font-size: 80%;
     text-align: center;
     padding: 1em 3em;
+}
+/* Major elements */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+h1 {
+    text-align: center;
+}
+a {
+    transition: all 0.25s ease-out;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+}
+a:hover {
+    border-bottom-color: rgba(0, 0, 0, 1);
+}
+nav li a {
+    border-bottom: none;
+    position: relative;
+}
+nav li a:hover::after {
+    transform: scaleX(1);
+    visibility: visible;
+}
+nav li a::after {
+    cursor: default;
+    pointer-events: none;
+    transform: scaleX(0);
+    width: 100%;
+    content: '';
+    position: absolute;
+    z-index: 2;
+    left: 0%;
+    bottom: 0px;
+    height: 2px;
+    background-color: black;
+    transition: transform 0.2s ease-in-out;
+}
+p {
+    text-align: justify;
+    padding: 6px 0;
+}
+.motive {
+    font-weight: bold;
+}
+p.heading {
+    text-decoration: underline;
+}
+.jumbotron.split {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+/* .jumbotron.split ~ p {
+    clear: both;
+} */
+.inline-main-img {
+    /* Subtract half of right margin */
+    width: calc(50% - 20px);
+    float: left;
+    margin-right: 40px;
+    margin-top: 10px;
+    display: block;
+}
+#nav-list-button {
+    width: 40px;
+    height: 40px;
+    display: none;
+    text-align: initial;
+}
+body.nav-open nav #nav-list-button > span:last-child {
+    transform: translateY(-10px) rotate(45deg);
+}
+
+body.nav-open nav #nav-list-button > span:nth-child(2) {
+    opacity: 0;
+}
+
+body.nav-open nav #nav-list-button > span:first-child {
+    transform: translateY(10px) rotate(-45deg);
+}
+body.nav-open nav > ul {
+    overflow-x: hidden;
+    overflow-y: auto;
+    pointer-events: all;
+    opacity: 1;
+    background-color: white;
+}
+body.nav-open {
+    overflow: hidden;
 }
 @media (min-width: 1276px) {
     body > nav + section > h1 + p {
@@ -223,31 +314,88 @@ footer {
     .row.small > .col-8 { width: 66.6666666667%; }
 }
 @media (max-width: 1050px) {
-    nav {
-        position: relative;
-        height: auto;
-    }
-    nav ul, nav ul li ul {
-        width: 100%;
+    nav > ul {
+        position: absolute;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        top: 100%;
+        left: 0;
+        margin: auto 0px;
+        z-index: -1;
+        padding: 40px 0px;
+        width: 100vw;
+        height: 100vh;
     }
     nav ul li ul {
         position: relative;
         top: 0;
         left: 0;
         opacity: 1;
+        margin-left: 10px;
         pointer-events: all;
+        display: flex;
+    }
+    #nav-list-button {
+        display: block;
+        position: relative;
+        float: right;
+        margin-right: 30px;
+        line-height: 9px;
+        cursor: pointer;
+        /* Account for top padding */
+        margin-top: -5px;
+        text-align: center;
+    }
+    #nav-list-button > span {
+        height: 5px;
+        width: 35px;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        background-color: #666;
+        display: inline-block;
+    }
+    nav img {
+        float: left;
+        margin-left: 30px;
     }
     section.jumbotron {
         height: 30vh;
     }
     nav li {
         margin-top: 5px;
+        width: max-content;
+        margin-left: 0px;
+        margin-bottom: 10px;
     }
-    body > nav + section {
-        margin-top: 0px;
+    body > nav + section > h1.small {
+        /* 10 px for nav bar top padding */
+        top: 5px;
+        margin: 0px auto;
+        width: min-content;
+        position: sticky;
+        position: -webkit-sticky;
+        z-index: 10;
+    }
+    body.nav-open nav + section:not(.jumbotron) > h1.small {
+        /* 10 px for nav bar top padding */
+        top: 5px;
+        margin: 0px auto;
+        width: min-content;
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+    nav li:hover ul {
+        pointer-events: auto;
+        opacity: 1;
+        box-shadow: none;
+    }
+    nav > ul > li:first-of-type {
+        margin-top: 15px;
     }
 }
 @media (max-width: 1276px) {
@@ -261,67 +409,4 @@ footer {
         height: 100px;
         width: 100px;
     }
-}
-
-/* Major elements */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-}
-h1 {
-    text-align: center;
-}
-a {
-    transition: all 0.25s ease-out;
-    color: inherit;
-    text-decoration: none;
-    border-bottom: solid 1px rgba(0, 0, 0, 0.3);
-}
-a:hover {
-    border-bottom-color: rgba(0, 0, 0, 1);
-}
-nav li a {
-    border-bottom: none;
-}
-nav li a:hover::after {
-    transform: scaleX(1);
-    visibility: visible;
-}
-nav li a::after {
-    cursor: default;
-    pointer-events: none;
-    transform: scaleX(0);
-    width: 100%;
-    content: '';
-    position: absolute;
-    z-index: 2;
-    left: 0%;
-    bottom: 0px;
-    height: 2px;
-    background-color: black;
-    transition: transform 0.2s ease-in-out;
-}
-p {
-    text-align: justify;
-    padding: 6px 0;
-}
-.motive {
-    font-weight: bold;
-}
-p.heading {
-    text-decoration: underline;
-}
-.jumbotron.split {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-/* .jumbotron.split ~ p {
-    clear: both;
-} */
-.inline-main-img {
-    /* Subtract half of right margin */
-    width: calc(50% - 20px);
-    float: left;
-    margin-right: 40px;
-    margin-top: 10px;
-    display: block;
 }
