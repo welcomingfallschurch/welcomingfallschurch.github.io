@@ -189,6 +189,20 @@ p.heading {
     margin-top: 10px;
     display: block;
 }
+.inline-img {
+    display: inline-block;
+    margin-top: 10px;
+    width: calc(25% - 20px);
+    min-width: 150px;
+}
+.inline-img.right {
+    float: right;
+    margin-left: 40px;
+}
+.inline-img.left {
+    float: left;
+    margin-right: 40px;
+}
 #nav-list-button {
     width: 40px;
     height: 40px;
@@ -274,7 +288,7 @@ body.nav-open {
         vertical-align: middle;
     }
     #partner-images img {
-        max-height: 100px;
+        max-height: 300px;
         max-width: 300px;
     }
     .jumbotron.split > img ~ p {
