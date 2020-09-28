@@ -237,17 +237,20 @@ body.nav-open {
     overflow: hidden;
 }
 nav + .banner {
-    display: none;
-    position: absolute;
-    /* Nav height */
-    top: 50px;
-    left: 0px;
-    width: 100%;
-    height: auto;
-    font-size: 20px;
+    display: flex;
+    position: fixed;
+    --banner-height: 75px;
+    font-size: 12px;
+    --banner-width: 150px;
+    right: 30px;
+    /* Nav height + arrow height */
+    top: 70px;
+    width: var(--banner-width);
+    height: var(--banner-height);
     z-index: 3;
     background-color: rgb(0, 193, 194);
     text-align: center;
+    transition: transform 0.3s;
     color: white;
 }
 button, input[type="submit"] {
@@ -377,10 +380,15 @@ input:not([type="submit"]) {
     }
     body nav + .banner {
         display: flex;
+        /* Nav height */
+        top: 50px;
+        left: 0px;
+        width: 100%;
+        height: auto;
+        font-size: 20px;
         flex-wrap: nowrap;
         align-items: center;
         justify-content: center;
-        transition: transform 0.3s;
     }
     body nav:not(.floating) + .banner {
         transform: translate(0px);
@@ -390,6 +398,24 @@ input:not([type="submit"]) {
     }
 }
 @media (max-width: 1050px) {
+    nav + .banner {
+        transform: translateY(0px);
+    }
+    nav:not(.scroll-top) + .banner {
+        transform: translateY(calc(-1 * var(--banner-height)));
+    }
+    nav + .banner::before {
+        content: '';
+        position: relative;
+        z-index: 555;
+        height: 0px;
+        width: 0px;
+        border: 20px solid transparent;
+        border-bottom-color: rgb(0, 193, 194);
+        /* Compensate for 40px of border height */
+        left: calc(100% - 40px);
+        top: -40px;
+    }
     nav > ul {
         position: absolute;
         display: flex;

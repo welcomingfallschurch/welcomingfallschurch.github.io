@@ -3,16 +3,21 @@ var body = document.getElementsByTagName('body')[0];
 var navButton = document.getElementById('nav-list-button');
 var bannerButton = document.getElementById('banner-button');
 var bannerInput = document.getElementById('banner-email');
+var FLOATING_HEADER_WIDTH = 1050;
 
 window.addEventListener('scroll', function(e) {
-    if (this.scrollY > 0 || this.innerWidth < 1050) {
+    if (this.scrollY > 0) {
         navbar.classList.add('floating');
+        navbar.classList.remove('scroll-top');
     } else {
-        navbar.classList.remove('floating');
+        if (window.innerWidth > FLOATING_HEADER_WIDTH) {
+            navbar.classList.remove('floating');
+        }
+        navbar.classList.add('scroll-top');
     }
 });
 
-if (window.innerWidth < 1050) {
+if (window.innerWidth < FLOATING_HEADER_WIDTH) {
     navbar.classList.add('floating');
 }
 
