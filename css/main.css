@@ -187,6 +187,17 @@ p.heading {
 /* .jumbotron.split ~ p {
     clear: both;
 } */
+.video-embed {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    margin-bottom: 0px;
+}
+p.caption {
+    color: gray;
+    font-size: 18px;
+    text-align: center;
+}
 .inline-main-img {
     /* Subtract half of right margin */
     width: calc(50% - 20px);
