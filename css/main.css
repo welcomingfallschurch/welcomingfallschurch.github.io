@@ -86,7 +86,7 @@ nav li ul li {
     width: min-content
 }
 /* First section, only if it's not a jumbotron */
-body > section:not(.jumbotron):first-of-type {
+body > section:first-of-type {
     margin-top: 50px;
 }
 section {
@@ -187,6 +187,17 @@ p.heading {
 /* .jumbotron.split ~ p {
     clear: both;
 } */
+.video-embed {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    margin-bottom: 0px;
+}
+p.caption {
+    color: gray;
+    font-size: 18px;
+    text-align: center;
+}
 .inline-main-img {
     /* Subtract half of right margin */
     width: calc(50% - 20px);
@@ -236,25 +247,18 @@ body.nav-open nav > ul {
 body.nav-open {
     overflow: hidden;
 }
-nav + .banner {
+.banner {
     display: none;
-    position: absolute;
-    /* Nav height */
-    top: 50px;
-    left: 0px;
-    width: 100%;
-    height: auto;
-    font-size: 20px;
-    z-index: 3;
     background-color: rgb(0, 193, 194);
     text-align: center;
+    transition: transform 0.3s;
     color: white;
 }
 button, input[type="submit"] {
     box-sizing: border-box;
-    border: 1px solid black;
     background: white;
     font-size: 14px;
+    border: none;
     padding: 5px 7px;
     cursor: pointer;
     min-width: 65px;
@@ -263,11 +267,12 @@ button, input[type="submit"] {
 }
 input:not([type="submit"]) {
     box-sizing: border-box;
-    border: 1px solid black;
     padding: 2px 4px;
     font-size: 14px;
+    border: none;
     border-radius: 3px;
-    width: 200px;
+    min-width: 100px;
+    max-width: 200px;
     margin: 0px 12px;
 }
 @media (min-width: 1276px) {
@@ -344,6 +349,13 @@ input:not([type="submit"]) {
         max-width: calc(100vw - 60px);
         max-height: 200px;
     }
+    input:not([type="submit"]) {
+        height: 25px;
+    }
+    .banner > span {
+        font-size: 15px;
+        flex: 1 0 150px;
+    }
 }
 @media (min-width: 650px) and (max-width: 1275px) {
     /* Rows */
@@ -368,20 +380,34 @@ input:not([type="submit"]) {
     .row.small > .col-8 { width: 66.6666666667%; }
 }
 @media (min-width: 1050px) {
+    body > nav {
+        display: flex;
+        justify-content: center;
+    }
     body > nav ~ section > h1 + p {
         margin-top: 20px;
     }
-    body nav + .banner {
+    .banner {
         display: flex;
+        /* Nav height */
+        top: 50px;
+        left: 0px;
+        width: 100%;
+        position: fixed;
+        font-size: 12px;
+        right: 30px;
+        width: 100vw;
+        height: auto;
+        z-index: 3;
+        font-size: 20px;
         flex-wrap: nowrap;
         align-items: center;
         justify-content: center;
-        transition: transform 0.3s;
     }
-    body nav:not(.floating) + .banner {
+    nav:not(.floating) + .banner {
         transform: translate(0px);
     }
-    body nav.floating + .banner {
+    nav.floating + .banner {
         transform: translateY(-50px);
     }
 }
@@ -469,6 +495,19 @@ input:not([type="submit"]) {
     nav > ul > li:first-of-type {
         margin-top: 15px;
     }
+    body.nav-open .banner {
+        display: flex;
+        z-index: 10;
+        top: 60px;
+        padding: 0px 20px;
+        min-height: 50px;
+        height: auto;
+        width: 100vw;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
 }
 @media (max-width: 1276px) {
     nav ul {
@@ -481,7 +520,9 @@ input:not([type="submit"]) {
         height: 100px;
         width: 100px;
     }
-    body nav + .banner > *:first-child {
+}
+@media (max-width: 1276px) and (min-width: 1050px) {
+    .banner > *:first-child {
         margin-left: 80px;
     }
 }
