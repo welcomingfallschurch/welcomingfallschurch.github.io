@@ -206,6 +206,11 @@ p.caption {
     margin-top: 10px;
     display: block;
 }
+
+.inline-main-img.right {
+    float: right;
+}
+
 .inline-img {
     display: inline-block;
     margin-top: 10px;
