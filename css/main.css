@@ -209,6 +209,8 @@ p.caption {
 
 .inline-main-img.right {
     float: right;
+    margin-left: 40px;
+    margin-right: 0px;
 }
 
 .inline-img {
