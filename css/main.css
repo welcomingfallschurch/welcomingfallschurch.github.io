@@ -87,7 +87,7 @@ nav li ul li {
 }
 /* First section, only if it's not a jumbotron */
 body > section:first-of-type {
-    margin-top: 85px;
+    margin-top: 80px;
 }
 section {
     padding: 10px 30px;
