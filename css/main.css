@@ -282,6 +282,10 @@ input:not([type="submit"]) {
     max-width: 200px;
     margin: 0px 12px;
 }
+.highlight {
+    background-color: #FFFF00;
+    padding: 0.1em;
+}
 @media (min-width: 1276px) {
     nav ul {
         margin: 0px 5px;
