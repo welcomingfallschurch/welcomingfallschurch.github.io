@@ -2,6 +2,7 @@
 ---
 :root {
   --sans: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, Helvetica Neue, Ubuntu, Roboto, Noto, Arial, sans-serif;
+  --serif: "New York", "Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 /* General */
 * {
@@ -11,14 +12,21 @@
     vertical-align: baseline;
 }
 body {
-    font-family: var(--sans);
+    font-family: var(--serif);
     font-weight: 300;
     font-size: 18pt;
     color: #666;
     line-height: 1.5;
 }
+h1, h2, h3, h4, h5, h6, nav ul {
+    font-family: var(--sans);
+}
+ul {
+    font-family: var(--serif);
+}
 /* Major regions */
 nav {
+    font-weight: 400;
     padding: 10px;
     position: fixed;
     z-index: 5;
@@ -137,23 +145,27 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     text-align: center;
 }
-a {
+a:not(nav li a) {
     transition: all 0.25s ease-out;
     color: inherit;
     text-decoration: none;
     border-bottom: solid 1px rgba(0, 0, 0, 0.3);
 }
-a:hover {
+a:hover:not(nav li a) {
     border-bottom-color: rgba(0, 0, 0, 1);
 }
 strong {
     font-weight: 700;
 }
 nav li a {
-    border-bottom: none;
+    color: inherit;
+    text-decoration: none;
     position: relative;
 }
-nav li a:hover::after {
+nav li a:hover {
+    text-decoration: underline;
+}
+/* nav li a:hover::after {
     transform: scaleX(1);
     visibility: visible;
 }
@@ -170,7 +182,7 @@ nav li a::after {
     height: 2px;
     background-color: black;
     transition: transform 0.2s ease-in-out;
-}
+} */
 p {
     text-align: justify;
     padding: 6px 0;
