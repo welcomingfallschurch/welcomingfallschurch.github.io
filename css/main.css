@@ -255,7 +255,6 @@ body.nav-open {
     overflow: hidden;
 }
 .banner {
-    display: none;
     background-color: rgb(0, 193, 194);
     text-align: center;
     transition: transform 0.3s;
@@ -404,7 +403,6 @@ input:not([type="submit"]) {
         top: 50px;
         left: 0px;
         width: 100%;
-        position: fixed;
         font-size: 12px;
         right: 30px;
         width: 100vw;
@@ -530,10 +528,5 @@ input:not([type="submit"]) {
     nav img {
         height: 100px;
         width: 100px;
-    }
-}
-@media (max-width: 1276px) and (min-width: 1050px) {
-    .banner > *:first-child {
-        margin-left: 80px;
     }
 }
