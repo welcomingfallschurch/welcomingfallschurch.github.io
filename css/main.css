@@ -410,9 +410,9 @@ input:not([type="submit"]) {
     body > nav ~ section > h1 + p {
         margin-top: 20px;
     }
-    .banner {
+    /*.banner {
         display: flex;
-        /* Nav height */
+        //Nav height
         top: 50px;
         left: 0px;
         width: 100%;
@@ -425,7 +425,7 @@ input:not([type="submit"]) {
         flex-wrap: nowrap;
         align-items: center;
         justify-content: center;
-    }
+    }*/
     nav:not(.floating) + .banner {
         transform: translate(0px);
     }
