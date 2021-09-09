@@ -117,7 +117,7 @@ section.jumbotron {
     height: 50vh;
 }
 section.jumbotron.home {
-    background-image: url('/images/header.jpg');
+    background-image: url('/images/welcoming-week-2021.jpg');
 }
 section.jumbotron.about {
     background-image: url('/images/love.jpg');
@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     text-align: center;
 }
-a:not(nav li a) {
+/*a:not(nav li a) {
     transition: all 0.25s ease-out;
     color: inherit;
     text-decoration: none;
@@ -153,6 +153,9 @@ a:not(nav li a) {
 }
 a:hover:not(nav li a) {
     border-bottom-color: rgba(0, 0, 0, 1);
+}*/
+a {
+    color: #666;
 }
 strong {
     font-weight: 700;
