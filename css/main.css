@@ -157,6 +157,9 @@ a:hover:not(nav li a) {
 a {
     color: #666;
 }
+img {
+    max-width: 100%
+}
 strong {
     font-weight: 700;
 }
