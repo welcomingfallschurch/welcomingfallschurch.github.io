@@ -126,6 +126,9 @@ section.jumbotron.home {
 section.jumbotron.about {
     background-image: url('/images/love.jpg');
 }
+section.jumbotron.welcoming-america{
+    background-image: url('/images/welcoming-america.jpg');
+}
 section.jumbotron > * {
     max-width: 100%;
 }
