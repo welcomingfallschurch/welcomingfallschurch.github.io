@@ -194,7 +194,6 @@ nav li a::after {
     transition: transform 0.2s ease-in-out;
 } */
 p {
-    text-align: justify;
     padding: 6px 0;
 }
 .motive {
