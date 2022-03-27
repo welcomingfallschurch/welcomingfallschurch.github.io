@@ -132,6 +132,9 @@ section.jumbotron.welcoming-america{
 section.jumbotron > * {
     max-width: 100%;
 }
+iframe {
+    max-width: 100%;
+}
 /* Images on Welcoming Week page */
 /* TODO: handle scaling in a less clumsy way than this mess */
 .row .row > div > img,
