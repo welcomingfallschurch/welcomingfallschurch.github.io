@@ -96,7 +96,8 @@ nav li:hover ul {
 nav li ul li {
     display: inline-block;
     margin: 0px 3px;
-    width: min-content
+    width: min-content;
+    padding-top: 15px;
 }
 /* First section, only if it's not a jumbotron */
 body > section:first-of-type {
