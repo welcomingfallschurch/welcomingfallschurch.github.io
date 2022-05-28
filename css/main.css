@@ -320,6 +320,9 @@ input:not([type="submit"]) {
 .paypal {
     text-align: center;
 }
+.hfill > span {
+    display: block;
+}
 @media (min-width: 1276px) {
     nav ul {
         margin: 0px 5px;
@@ -563,5 +566,11 @@ input:not([type="submit"]) {
     nav img {
         height: 100px;
         width: 100px;
+    }
+}
+@media (min-width: 900px) {
+    .hfill {
+        display: flex;
+        justify-content: space-between;
     }
 }
