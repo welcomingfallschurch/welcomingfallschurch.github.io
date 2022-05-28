@@ -245,6 +245,10 @@ p.caption {
     margin-right: 0px;
 }
 
+.inline-main-img.vertical{
+    width: calc(20% - 20px);
+}
+
 .inline-img {
     display: inline-block;
     margin-top: 10px;
