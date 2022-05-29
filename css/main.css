@@ -394,6 +394,9 @@ input:not([type="submit"]) {
     .jumbotron.split {
         text-align: center;
     }
+    .jumbotron.split p {
+        text-align: left;
+    }
     .jumbotron.split > img {
         margin-right: 0px;
         margin-left: 0px;
