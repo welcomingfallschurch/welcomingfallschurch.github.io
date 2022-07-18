@@ -333,6 +333,20 @@ input:not([type="submit"]) {
 figcaption {
     font-style: italic;
 }
+.celebrate-stories-container {
+    --items: 4;
+    display: grid;
+    grid-template-columns: repeat(var(--items), 1fr);
+    background: white;
+    width: var(--width);
+    grid-gap: 10px;
+}
+.celebrate-stories-container img {
+    /* max-width: 200px; */
+}
+.celebrate-stories-container figcaption {
+    text-align: center;
+}
 @media (min-width: 1276px) {
     nav ul {
         margin: 0px 5px;
