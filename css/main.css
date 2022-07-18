@@ -330,6 +330,9 @@ input:not([type="submit"]) {
 .hfill > span {
     display: block;
 }
+figcaption {
+    font-style: italic;
+}
 @media (min-width: 1276px) {
     nav ul {
         margin: 0px 5px;
