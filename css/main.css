@@ -334,15 +334,12 @@ figcaption {
     font-style: italic;
 }
 .celebrate-stories-container {
-    --items: 4;
+    --items: 2; /* change 2 to 4 once there are at least four entries */
     display: grid;
     grid-template-columns: repeat(var(--items), 1fr);
     background: white;
     width: var(--width);
     grid-gap: 10px;
-}
-.celebrate-stories-container img {
-    /* max-width: 200px; */
 }
 .celebrate-stories-container figcaption {
     text-align: center;
