@@ -122,7 +122,8 @@ section.jumbotron {
     height: 50vh;
 }
 section.jumbotron.home {
-    background-image: url('/images/header.jpg');
+    background-image: url('/images/header2.jpg');
+    height: 20vh;
 }
 section.jumbotron.about {
     background-image: url('/images/love.jpg');
