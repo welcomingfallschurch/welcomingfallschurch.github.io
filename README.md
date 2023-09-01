@@ -3,7 +3,7 @@ Website for Welcoming Falls Church
 
 ## Testing
 
-1. Download and install Ruby
+1. [Download and install Ruby](https://jekyllrb.com/docs/installation/#guides)
 2. Install the bundler gem: `gem install bundler`
 3. Navigate to this project's folder and run `bundle install`
 4. Test the website locally by running `make serve`
