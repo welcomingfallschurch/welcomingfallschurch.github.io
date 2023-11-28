@@ -338,6 +338,12 @@ input:not([type="submit"]) {
 .paypal {
     text-align: center;
 }
+.zelle {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .hfill > span {
     display: block;
 }
@@ -586,6 +592,9 @@ figcaption {
         align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
+    }
+    .zelle {
+        width: 100%;
     }
 }
 @media (max-width: 1276px) {
