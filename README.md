@@ -29,3 +29,4 @@ Donate button (use `{% include paypal_button.html %}` instead):
 QR Code:
 
 ![Donation QR code](/images/donation-qr-code.png)
+
