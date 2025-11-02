@@ -1,4 +1,4 @@
-var navbar = document.getElementsByTagName('nav')[0];
+var navbar = document.getElementById('top-navbar');
 var body = document.getElementsByTagName('body')[0];
 var navButton = document.getElementById('nav-list-button');
 var bannerButton = document.getElementById('banner-button');
@@ -12,9 +12,13 @@ window.addEventListener('scroll', function(e) {
     }
 });
 
-if (window.innerWidth < 1050) {
-    navbar.classList.add('floating');
-}
+window.addEventListener("resize", ()=>{
+    if (window.innerWidth < 1050) {
+        navbar.classList.add('floating');
+    }else if(this.scrollY <= 0){
+        navbar.classList.remove('floating');
+    }
+})
 
 navButton.addEventListener('click', function() {
     body.classList.toggle('nav-open');
