@@ -1,0 +1,18 @@
+<div class="dropdown">
+    <p onclick=" // TODO not have this be weird inline script
+        const parent = this.parentNode
+        const contentEle = parentNode.children[1]
+        const isHidden = contentEle.style.display == 'none'
+        if(isHidden){// show
+            contentEle.style.display=''
+            parent.children[0].children[0].textContent='-'
+        }else{// hide
+            contentEle.style.display = 'none'
+            parent.children[0].children[0].textContent='+'
+        }
+        ">
+        <!--TODO make dropdown icon an image, rather than text-->
+        <span class="dropdown-icon">+</span> <span class="dropdown-label">{{ include.label }}</span></p>
+        <!--defaults to closed - add an include param to make that configurable?-->
+    <p class="dropdown-content" style="display:none">{{ include.content }}</p>
+</div>
