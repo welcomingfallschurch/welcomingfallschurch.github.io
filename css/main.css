@@ -615,3 +615,18 @@ figcaption {
         justify-content: space-between;
     }
 }
+
+/*CSS for dropdowns (WIP)*/
+.dropdown{
+    width:90%;
+    padding:10px;
+    background-color:#eeeeee;
+    margin:20px
+}
+.dropdown-content{
+    background-color: #ffffff;
+    padding:10px
+}
+.dropdown-icon{
+    font-family:monospace;
+}
