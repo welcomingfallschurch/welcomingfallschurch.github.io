@@ -1,45 +1,79 @@
 <nav id="top-navbar">
     <a href="/" id="logo"><img src="/images/wfclogo.png"></a>
     <ul id="navbar-ul">
-        <!-- TODO automate this in Jekyll -->
-        <li>
-            <a href="#">Initiatives</a>
-            <ul>
-                <li>
-                    <a href="/initiatives/literacy-center">Adult &amp; Family Literacy Center</a>
-                </li>
-                <li>
-                    <a href="/initiatives/welcoming-refugees">Welcoming Refugees</a>
-                </li>
-                <li>
-                    <a href="/welcoming-week">Welcoming Week</a>
-                </li>
-                <li>
-                    <a href="/initiatives/grocery-deliveries">Welcoming FC/CASA Grocery Deliveries</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="/partners">Partners</a>
-        </li>
-        <li>
-            <a href="/about/welcoming-falls-church">About</a>
-            <ul>
-                <li>
-                    <a href="/about/welcoming-falls-church">Welcoming Falls Church</a>
-                </li>
-                <li>
-                    <a href="/about/welcoming-america">Welcoming America</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="/donate">Get Involved</a>
-        </li>
+        <!-- TODO automate this in Jekyll somehow -->
+        <div id="navbar-large">
+            <li>
+                <a href="#">Initiatives</a>
+                <ul>
+                    <li>
+                        <a href="/initiatives/literacy-center">Adult &amp; Family Literacy Center</a>
+                    </li>
+                    <li>
+                        <a href="/initiatives/welcoming-refugees">Welcoming Refugees</a>
+                    </li>
+                    <li>
+                        <a href="/welcoming-week">Welcoming Week</a>
+                    </li>
+                    <li>
+                        <a href="/initiatives/grocery-deliveries">Welcoming FC/CASA Grocery Deliveries</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/partners">Partners</a>
+            </li>
+            <li>
+                <a href="/about/welcoming-falls-church">About</a>
+                <ul>
+                    <li>
+                        <a href="/about/welcoming-falls-church">Welcoming Falls Church</a>
+                    </li>
+                    <li>
+                        <a href="/about/welcoming-america">Welcoming America</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/donate">Get Involved</a>
+            </li>
+        </div>
+        <div id="navbar-small" class="hidden"> <!--TODO show this when in small mode (width < 1050)-->
+            <li>
+                <a href="/about/welcoming-falls-church">About</a>
+                <ul>
+                    <li>
+                        <a href="/about/welcoming-falls-church">Welcoming Falls Church</a>
+                    </li>
+                    <li>
+                        <a href="/about/welcoming-america">Welcoming America</a>
+                    </li>
+                    <li>
+                        <a href="/partners">Partners</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Programs</a>
+                <ul>
+                    <li>
+                        <a href="/initiatives/literacy-center">Adult &amp; Family Literacy Center</a>
+                    </li>
+                    <li>
+                        <a href="/initiatives/welcoming-refugees">Welcoming Refugees</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/donate">Get Involved</a> <!-- When created, events page goes here also -->
+            </li>
+        </div>
     </ul>
+        
     <div id="nav-list-button">
         <span></span>
         <span></span>
         <span></span>
     </div>
+
 </nav>

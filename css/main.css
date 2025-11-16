@@ -616,6 +616,10 @@ figcaption {
     }
 }
 
+.hidden {
+    display: none;
+}
+
 /*CSS for dropdowns (WIP)*/
 .dropdown{
     width:90%;
