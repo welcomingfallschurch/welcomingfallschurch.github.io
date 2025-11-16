@@ -623,9 +623,11 @@ figcaption {
     background-color:#eeeeee;
     margin:20px
 }
+
 .dropdown-label{
   user-select:none;
 }
+
 .dropdown-content{
     background-color: #ffffff;
     padding:10px
