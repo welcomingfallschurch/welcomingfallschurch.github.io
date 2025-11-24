@@ -233,12 +233,24 @@ body.nav-open {
 }
 
 @media (max-width: 1050px){
+    #navbar-large {
+        display: none;
+    }
+    #navbar-small {
+        display: inherit;
+    }
     nav li {
         margin-left:40px;
     }
 }
 
 @media (min-width: 1050px){
+    #navbar-large {
+        display: inherit;
+    }
+    #navbar-small {
+        display: none;
+    }
     body > nav {
         display: flex;
         justify-content: center;
