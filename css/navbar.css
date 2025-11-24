@@ -126,7 +126,7 @@ body.nav-open {
     overflow: hidden;
 }
 
-@media (max-width:400px){
+@media (max-width:350px){
     /*use navbar button if very small*/
     
     /* nav list button, menu*/
@@ -226,12 +226,6 @@ body.nav-open {
     }
 }
 
-@media (max-width: 550px){
-    nav li {
-        font-size:15px;
-    }
-}
-
 @media (max-width: 1050px){
     #navbar-large {
         display: none;
@@ -240,7 +234,14 @@ body.nav-open {
         display: inherit;
     }
     nav li {
-        margin-left:40px;
+        margin-left: 35shpx
+    }
+}
+
+@media (max-width: 550px){
+    nav li {/* additional shrinking */
+        font-size: 15px;
+        margin-left: 8px;
     }
 }
 
