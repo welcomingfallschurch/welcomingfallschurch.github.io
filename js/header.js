@@ -4,10 +4,6 @@ var navButton = document.getElementById('nav-list-button');
 var bannerButton = document.getElementById('banner-button');
 var bannerInput = document.getElementById('banner-email');
 
-var headerPageLarge = document.getElementById('navbar-large');
-var headerPageSmall = document.getElementById('navbar-small');
-
-
 // navbar gradient
 window.addEventListener('scroll', function (e) {
     if (this.scrollY > 0 || this.innerWidth < 1050) {
@@ -20,21 +16,9 @@ window.addEventListener('scroll', function (e) {
 
 window.addEventListener("resize", () => {
     if (window.innerWidth < 1050) {
-
         navbar.classList.add('floating');
-
-        headerPageLarge.classList.add('hidden');
-        headerPageSmall.classList.remove('hidden');
-
-    } else {
-
-        if (this.scrollY <= 0) {
-            navbar.classList.remove('floating');
-        }
-
-        headerPageLarge.classList.remove('hidden');
-        headerPageSmall.classList.add('hidden');
-        
+    } else if (this.scrollY <= 0) {
+        navbar.classList.remove('floating');
     }
 })
 
@@ -54,6 +38,6 @@ bannerButton.addEventListener('click', function () {
 });
 
 
-
-window.dispatchEvent(new Event('resize')); // to add floating if necessary, change header contents
+window.dispatchEvent(new Event('resize'));
+// to add floating if necessary, change header contents
 // there is probably a better way to do this
