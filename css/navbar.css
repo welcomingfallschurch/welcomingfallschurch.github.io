@@ -240,9 +240,9 @@ body.nav-open {
         justify-content: center;
     }
 
-    #navbar-ul > div > li { 
-        overflow-x: scroll; /*ideally never needed, but should prevent content being hidden*/
-        background-color: #e8e8e8;
+    body.nav-open nav > ul > div > li { 
+        overflow-x: scroll;/*ideally never needed, but should prevent content being hidden*/
+        overflow-y: auto;
     }
 
     #navbar-ul a {

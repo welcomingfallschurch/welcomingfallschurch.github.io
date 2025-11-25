@@ -15,6 +15,11 @@ window.addEventListener('scroll', function (e) {
 
 
 window.addEventListener("resize", () => {
+
+    if (window.innerWidth > 350){
+            body.classList.remove("nav-open");
+    }
+    
     if (window.innerWidth < 1050) {
         navbar.classList.add('floating');
     } else if (this.scrollY <= 0) {
