@@ -192,17 +192,6 @@ body.nav-open {
         position: -webkit-sticky;
         z-index: 10;
     }
-    
-    body.nav-open nav ~ section:not(.jumbotron) > h1.small {
-        /* 10 px for nav bar top padding */
-        top: 5px;
-        margin: 0px auto;
-        width: min-content;
-        position: fixed;
-        left: 0;
-        right: 0;
-        z-index: 10;
-    }
     nav li:hover ul {
         pointer-events: auto;
         opacity: 1;
@@ -234,7 +223,7 @@ body.nav-open {
         display: inherit;
     }
     nav li {
-        margin-left: 35shpx
+        margin-left: 30px
     }
 }
 
