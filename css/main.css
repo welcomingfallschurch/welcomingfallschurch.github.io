@@ -384,22 +384,30 @@ figcaption {
 }
 
 /*CSS for dropdowns (WIP)*/
-.dropdown{
-    width:90%;
-    padding:10px;
-    background-color:#eeeeee;
-    margin:20px
+.dropdown {
+    width: 90%;
+    padding: 10px;
+    background-color: #eeeeee;
+    margin: 20px
 }
 
-.dropdown-label{
-  user-select:none;
+.dropdown-label {
+  user-select: none;
 }
 
-.dropdown-content{
+.dropdown-content {
     background-color: #ffffff;
-    padding:10px
+    padding: 10px
 }
 
-.dropdown-icon{
-    font-family:monospace;
+.dropdown-icon {
+    font-family: monospace;
+}
+
+.oldpage {
+    background-color: #dddddd;
+    text-align: center;
+    width: fit-content;
+    padding: 10px;
+    margin: 30px auto;
 }
