@@ -385,7 +385,8 @@ figcaption {
 
 /*CSS for dropdowns (WIP)*/
 .dropdown {
-    width: 80%;
+    width: 90%;
+    max-width: 1000px;
     padding: 10px;
     background-color: #eeeeee;
     margin: 20px auto
