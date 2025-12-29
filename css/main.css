@@ -385,10 +385,10 @@ figcaption {
 
 /*CSS for dropdowns (WIP)*/
 .dropdown {
-    width: 90%;
+    width: 80%;
     padding: 10px;
     background-color: #eeeeee;
-    margin: 20px
+    margin: 20px auto
 }
 
 .dropdown-label {
