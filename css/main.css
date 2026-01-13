@@ -151,6 +151,7 @@ p.caption {
     float: left;
     margin-right: 40px;
     margin-top: 10px;
+    margin-bottom: 10px;
     display: block;
 }
 
@@ -389,7 +390,8 @@ figcaption {
     max-width: 1000px;
     padding: 10px;
     background-color: #eeeeee;
-    margin: 20px auto
+    margin: 20px auto;
+    overflow: hidden;
 }
 
 .dropdown-label {
@@ -398,7 +400,7 @@ figcaption {
 
 .dropdown-content {
     background-color: #ffffff;
-    padding: 10px
+    padding: 10px;
 }
 
 .dropdown-icon {
