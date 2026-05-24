@@ -240,16 +240,20 @@ figcaption {
 .celebrate-stories-container figcaption {
     text-align: center;
 }
+
+@media (min-width: 1000px){
+    section > * {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
 @media (min-width: 1276px) {
     section {
         padding: 30px 50px;
     }
-    section > * {
-        max-width: 10in;
-        margin: 0 auto;
-    }
     section.wide > * {
-        max-width: 14in;
+        max-width: 1400px;
     }
     /* Rows */
     .row {
