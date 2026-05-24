@@ -383,6 +383,10 @@ figcaption {
         justify-content: space-between;
     }
 }
+.quote {
+    padding-left: 40px;
+    font-style: italic;
+}
 
 .hidden {
     display: none;
