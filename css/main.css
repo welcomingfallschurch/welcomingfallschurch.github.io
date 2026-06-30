@@ -23,6 +23,9 @@ h1, h2, h3, h4, h5, h6, nav ul {
 }
 h1:first-of-type {
     padding-bottom: 15px;
+    max-width: 510px; /*Avoid overlap with the site icon in top left navbar*/
+    margin-left: auto;
+    margin-right: auto;
 }
 ul {
     font-family: var(--serif);

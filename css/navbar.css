@@ -278,7 +278,7 @@ body.nav-open {
         display: none;
     }
     body > nav {
-        display: flex;
+        display: inherit;
         justify-content: center;
     }
     body > nav ~ section > h1 + p {
@@ -308,4 +308,53 @@ body.nav-open {
     nav ul {
         margin: 0px 5px;
     }
+}
+
+#lang-button {
+    display: flex;
+    position: relative;
+    float: right;
+    margin-right: 5px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: left;
+    width: 35px;
+    overflow-x: show;
+}
+
+#lang-button > a:link {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+#lang-button img {
+    width: 30px;
+    height: 30px;
+    margin-left: 0px;
+}
+
+#lang-button > ul {
+    position: relative;
+    top: 0;
+    left: -50px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: all;
+    display: flex;
+    background-color: #ffffff;
+    padding: 5px 5px;
+    flex-direction: column;
+    min-width: 10px;
+    width: max-content;
+}
+
+#lang-button li {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#lang-button:hover > ul{
+    pointer-events: auto;
+    opacity: 1;
+    box-shadow: none;
 }
