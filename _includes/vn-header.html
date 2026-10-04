@@ -1,0 +1,26 @@
+<nav id="top-navbar"><!-- another TODO this is redundant with header.html, would ideally use includes? -->
+    <a href="/" id="logo"><img src="/images/wfclogo.png"></a>
+    <ul id="navbar-ul">
+        <!-- TODO automate this in Jekyll somehow -->
+        <div>
+            <li>
+                <a href="/vn">Giới thiệu</a>
+            </li>
+            <li>
+                <a href="/vn/literacy-center">Các lớp học tiếng Anh</a>
+            </li>
+            <li>
+                <a href="/vn/calendar">Sự kiện</a>
+            </li>
+        </div>
+    </ul>
+
+    <div id="nav-list-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    {% include lang-button.html %}
+
+</nav>
